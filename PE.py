@@ -16,3 +16,36 @@ def isPalindrome(k):
 			return False
 		a,b = a + 1, b - 1
 	return True
+
+
+
+def stringToArr(strIn,row,col):
+	toArr = strIn.split(" ");
+	retArr = []
+
+	for y in range(row):
+		currRow = []
+		for x in range(col):
+			currnum = int(toArr[col * y + x])
+			
+			currRow.append(currnum)
+		retArr.append(currRow)
+	return retArr
+
+
+
+def numDivisors(num):
+	k=0
+	for i in range(1,int(math.sqrt(num)) + 1):
+		if num % i == 0:
+			k += 2
+	if int(math.sqrt(num)) == math.sqrt(num):
+		k-=1
+	return k
+
+
+def nthNatural(n):
+	summ = 0
+	for i in range(n + 1):
+		summ += i
+	return summ
