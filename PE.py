@@ -49,3 +49,12 @@ def nthNatural(n):
 	for i in range(n + 1):
 		summ += i
 	return summ
+
+def sumDivisors(n):
+	k=0
+	for i in range(1,int(math.sqrt(n)) + 1):
+		if n % i == 0:
+			k += i + n / i
+	if int(math.sqrt(n)) == math.sqrt(n):
+		k-= math.sqrt(n)
+	return k - n
