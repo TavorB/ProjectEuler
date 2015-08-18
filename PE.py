@@ -1,6 +1,9 @@
 import math
 
 def isPrime(k):
+	if k <= 1:
+		return False
+	print(k)
 	for i in range(2, (int) (math.sqrt(k)) + 1):
 		if k % i == 0:
 			return False
