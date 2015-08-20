@@ -1,9 +1,13 @@
 import math
 
+def factorial(k):
+	if k<=1:
+		return 1
+	return k * factorial(k-1)
+
 def isPrime(k):
 	if k <= 1:
 		return False
-	print(k)
 	for i in range(2, (int) (math.sqrt(k)) + 1):
 		if k % i == 0:
 			return False
