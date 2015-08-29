@@ -65,3 +65,19 @@ def sumDivisors(n):
 	if int(math.sqrt(n)) == math.sqrt(n):
 		k-= math.sqrt(n)
 	return k - n
+
+def nPandigital(a, n):
+	if len(str(a)) != n:
+		return False
+	l = set()
+	while a:
+		if a%10 != 0:
+			l.add(a%10)
+		a /= 10
+	return len(l) == n
+
+def pandigital(a):
+	return nPandigital(a, 9)
+	
+
+
