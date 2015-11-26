@@ -92,6 +92,9 @@ def factorize(n):
 			ret.add(n)
 			break
 	return ret
+
+def choose(n,c):
+	return factorial(n)/factorial(c)/factorial(n-c)
 	
 
 
