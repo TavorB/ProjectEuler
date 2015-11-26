@@ -78,6 +78,20 @@ def nPandigital(a, n):
 
 def pandigital(a):
 	return nPandigital(a, 9)
+
+def factorize(n):
+	ret = set()
+	while n != 1:
+		k = n
+		for i in range(2,int(math.sqrt(n)) + 1):
+			if n % i ==0:
+				ret.add(i)
+				n /= i
+				break
+		if k == n:
+			ret.add(n)
+			break
+	return ret
 	
 
 
