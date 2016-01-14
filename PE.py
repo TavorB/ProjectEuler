@@ -96,5 +96,21 @@ def factorize(n):
 def choose(n,c):
 	return factorial(n)/factorial(c)/factorial(n-c)
 	
-
-
+def isPermutation(a,b):
+	first = dict()
+	second = dict()
+	while a > 0:
+		digit = a%10
+		if digit in first:
+			first[digit] += 1
+		else:
+			first[digit] = 1
+		a /= 10
+	while b > 0:
+		digit = b%10
+		if digit in second:
+			second[digit] += 1
+		else:
+			second[digit] = 1
+		b /= 10
+	return first == second
