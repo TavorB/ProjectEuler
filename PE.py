@@ -1,5 +1,14 @@
 import math
 
+def reverse(n):
+	return int(str(n)[::-1])
+
+def numToDigitArr(n):
+	arr = [0] * 10
+	for ch in str(n):
+		arr[int(ch)]+=1
+	return arr
+
 def factorial(k):
 	if k<=1:
 		return 1
@@ -114,3 +123,5 @@ def isPermutation(a,b):
 			second[digit] = 1
 		b /= 10
 	return first == second
+
+
